@@ -84,3 +84,55 @@ const functionWithArgs = (a,b) =>{
     console.log(a + b);
 }
 
+
+/*
+We can pass values into a function with arguments. You can use a return statement to send a value back out of a function.
+
+Example
+
+function plusThree(num) {
+  return num + 3;
+}
+
+const answer = plusThree(5);
+answer has the value 8.
+
+plusThree takes an argument for num and returns a value equal to num + 3.
+
+Create a function timesFive that accepts one argument, multiplies it by 5, and returns the new value.
+*/
+
+
+const timesFive = (num) => num * 5;
+
+ /*
+ In JavaScript, scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code.
+
+Variables which are declared without the let or const keywords are automatically created in the global scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with let or const.
+
+Using let or const, declare a global variable named myGlobal outside of any function. Initialize it with a value of 10.
+
+Inside function fun1, assign 5 to oopsGlobal without using the var, let or const keywords.
+*/
+
+// Declare the myGlobal variable below this line
+let myGlobal = 10;
+
+function fun1() {
+  // Assign 5 to oopsGlobal here`
+  oopsGlobal = 5;
+
+}
+
+// Only change code above this line
+
+function fun2() {
+  let output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
