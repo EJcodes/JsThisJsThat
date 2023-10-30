@@ -284,13 +284,11 @@ The nextInLine function should then return the element that was removed.
 */
 
 
-
 function nextInLine(arr, item) {
   // Only change code below this line
-  arr.shift();
-  console.log(arr)
-  arr.push(item)
-  console.log(arr)
+  arr.push(item);
+  let boo = arr.shift();
+  return boo
   return item;
   // Only change code above this line
 }
