@@ -1069,11 +1069,7 @@ function switchOfStuff(val) {
 
 switchOfStuff(1);
 
-<<<<<<< HEAD
 /*
-=======
-/* 
->>>>>>> b705148a771c67b906b9a22a67961dafa404ceef
 If the break statement is omitted from a switch statement's case, the following case statement(s) are executed until a break is encountered. If you have multiple inputs with the same output, you can represent them in a switch statement like this:
 
 let result = "";
@@ -1088,7 +1084,6 @@ switch (val) {
 }
 Cases for 1, 2, and 3 will all produce the same result.
 
-<<<<<<< HEAD
 Write a switch statement to set answer for the following ranges:
 1-3 - Low
 4-6 - Mid
@@ -1174,34 +1169,31 @@ switch (val) {
 }
 
 chainToSwitch(7);
-=======
+
+/*
+You may recall from Comparison with the Equality Operator that all comparison operators return a boolean true or false value.
+
+Sometimes people use an if/else statement to do a comparison, like this:
+
+function isEqual(a, b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+But there's a better way to do this. Since === returns true or false, we can return the result of the comparison:
+
+function isEqual(a, b) {
+  return a === b;
+}
+Fix the function isLess to remove the if/else statements.
 */
 
-function sequentialSizes(val) {
-    let answer = "";
-    // Only change code below this line
-    switch(val){
-      case 1:
-      case 2:
-      case 3: 
-        answer = "Low";
-        break;
-      case 4:
-      case 5:
-      case 6:
-        answer = "Mid";
-        break;
-      case 7:
-      case 8:
-      case 9:
-        answer = "High";
-        break;
-    }
-  
-  
-    // Only change code above this line
-    return answer;
-  }
-  
-  sequentialSizes(1);
->>>>>>> b705148a771c67b906b9a22a67961dafa404ceef
+function isLess(a, b) {
+  // Only change code below this line
+  return a < b;
+  // Only change code above this line
+}
+
+isLess(10, 15);
