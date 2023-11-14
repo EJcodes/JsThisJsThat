@@ -1060,7 +1060,7 @@ function switchOfStuff(val) {
       answer = "cat";
       break;
     default: 
-      answer = "stuff";
+      answer = "stuff"; 
       break;
   }
 
@@ -1265,14 +1265,23 @@ Do NOT return an array.
 Do NOT include quotes (single or double) in the output.
 
 */ 
-
 let count = 0;
 
 function cc(card) {
   // Only change code below this line
-
-
-  return "Change Me";
+  if(card >1 && card <= 6){
+    count += 1;
+    console.log(count);
+    return "5 Bet";
+  }else if(card >=7 && card <= 9){
+    count += 0;
+    console.log(count);
+    return "0 Hold";
+  }else if(card === 10 || card ==="J"|| card === "Q" || card === "K" || card ==="A"){
+  console.log(count);
+  count -= 5;
+  return "-5 Change";
+  }
   // Only change code above this line
 }
 
