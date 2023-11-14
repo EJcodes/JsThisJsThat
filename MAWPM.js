@@ -1265,24 +1265,35 @@ Do NOT return an array.
 Do NOT include quotes (single or double) in the output.
 
 */ 
-let count = 0;
+var count = 0;
 
 function cc(card) {
-  // Only change code below this line
-  if(card >1 && card <= 6){
-    count += 1;
-    console.log(count);
-    return "5 Bet";
-  }else if(card >=7 && card <= 9){
-    count += 0;
-    console.log(count);
-    return "0 Hold";
-  }else if(card === 10 || card ==="J"|| card === "Q" || card === "K" || card ==="A"){
-  console.log(count);
-  count -= 5;
-  return "-5 Change";
+  switch(card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
+      break;
   }
-  // Only change code above this line
+
+  var holdbet = 'Hold'
+  if (count > 0) {
+    holdbet = 'Bet'
+  }
+
+  return count + " " + holdbet;
+
 }
 
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+cc(2); cc('K'); cc(10); cc('K'); cc('A');
+console.log(cc(4))
